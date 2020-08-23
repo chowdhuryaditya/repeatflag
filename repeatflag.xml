@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" ?>
+<casaxml xmlns="http://casa.nrao.edu/schema/psetTypes.html"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://casa.nrao.edu/schema/casa.xsd
+file:///opt/casa/code/xmlcasa/xml/casa.xsd">
+
+<task type="function" name="repeatflag" category="calibration" visibility="experimental">
+
+	<shortdescription>Task for transferring flags from a frequency averaged measurement set to a native resolution measurement set. </shortdescription>
+
+	<description>Note that this is tested only for cases where the frequency averaged measurement set was derived from the native one with the split task.</description>
+
+	<input>
+
+		<param type="string" name="visfrom" mustexist="true">
+			<description>Name of visibility file from which flags are read</description>
+			<value></value>
+		</param>
+
+		<param type="string" name="visto" mustexist="true">
+			<description>Name of visibility file to which flags are written</description>
+			<value></value>
+		</param>
+
+		 <param type="string" name="fieldfrom" >
+			<description>Fields in visfrom for which flags are read</description>
+			<value></value>
+		</param>
+
+		<param type="string" name="fieldto" >
+			<description>Fields in visto for which flags are written</description>
+			<value></value>
+		</param>
+    
+		 <constraints/>
+		
+				
+
+ </input>
+
+  <returns type="void"/>
+
+</task>
+
+</casaxml>
